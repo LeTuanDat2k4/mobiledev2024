@@ -1,5 +1,6 @@
 package vn.edu.usth.usthweather;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -59,9 +60,12 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_forecast);
-        v.setBackgroundColor(0xFFFF0000);
-        return inflater.inflate(R.layout.fragment_forecast, container, false);
+        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
+        int color1 = Color.parseColor("#20FF0000");
+        int color2 = Color.parseColor("#2000FF00");
+        int color3 = Color.parseColor("#200000FF");
 
+        view.setBackgroundColor(color2);
+        return view;
     }
 }
