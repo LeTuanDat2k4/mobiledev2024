@@ -17,8 +17,8 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-        Log.i("WeatherActivity", "onCreate: ");
-
+//        Log.i("WeatherActivity", "onCreate: ");
+//
         ForecastFragment fcf = new ForecastFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -26,32 +26,32 @@ public class WeatherActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i("WeatherActivity","onStart");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i("WeatherActivity","onResume");
-    }
-
-    public WeatherActivity() {
-        super();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i("WeatherActivity","OnStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i("WeatherActivity","onDestroy");
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        Log.i("WeatherActivity","onStart");
+//    }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        Log.i("WeatherActivity","onResume");
+//    }
+//
+//    public WeatherActivity() {
+//        super();
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        Log.i("WeatherActivity","OnStop");
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        Log.i("WeatherActivity","onDestroy");
+//    }
 
 }
