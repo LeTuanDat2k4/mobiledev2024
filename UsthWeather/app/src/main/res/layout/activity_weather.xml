@@ -5,23 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".WeatherActivity">
 
-    <fragment
-        android:id="@+id/weather_fragment"
-        android:name="vn.edu.usth.usthweather.WeatherFragment"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:layout_margin="20dp" />
-
-    <fragment
-        android:id="@+id/forecast_fragment"
-        android:name="vn.edu.usth.usthweather.ForecastFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6"/>
+        android:layout_height="match_parent" />
 
 <!--    <ImageView-->
 <!--        android:layout_width="wrap_content"-->

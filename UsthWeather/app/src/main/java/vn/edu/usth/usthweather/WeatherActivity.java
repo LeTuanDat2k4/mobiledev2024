@@ -9,7 +9,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -19,13 +21,18 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
 //        Log.i("WeatherActivity", "onCreate: ");
 //
-        WeatherFragment wf = new WeatherFragment();
-        ForecastFragment fcf = new ForecastFragment();
+//        WeatherFragment wf = new WeatherFragment();
+//        ForecastFragment fcf = new ForecastFragment();
 //        FragmentManager fragmentManager = getSupportFragmentManager();
 //        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 //        fragmentTransaction.add(R.id.fragment_container1,wf);
 //        fragmentTransaction.add(R.id.fragment_container2,fcf);
 //        fragmentTransaction.commit();
+
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        WeatherPagerAdapter adapter = new WeatherPagerAdapter(getSupportFragmentManager());
+        viewPager.setOffscreenPageLimit(3);
+        viewPager.setAdapter(adapter);
 
     }
 
