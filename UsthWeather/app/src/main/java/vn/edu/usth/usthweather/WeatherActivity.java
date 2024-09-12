@@ -12,6 +12,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -29,10 +33,26 @@ public class WeatherActivity extends AppCompatActivity {
 //        fragmentTransaction.add(R.id.fragment_container2,fcf);
 //        fragmentTransaction.commit();
 
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        WeatherPagerAdapter adapter = new WeatherPagerAdapter(getSupportFragmentManager());
-        viewPager.setOffscreenPageLimit(3);
+        ViewPager2 viewPager = findViewById(R.id.view_pager);
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        WeatherPagerAdapter adapter = new WeatherPagerAdapter(this);
         viewPager.setAdapter(adapter);
+
+
+        new TabLayoutMediator(tabLayout, viewPager,
+                (tab, position) -> {
+                    switch (position) {
+                        case 0:
+                            tab.setText("Ha Noi");
+                            break;
+                        case 1:
+                            tab.setText("Paris");
+                            break;
+                        case 2:
+                            tab.setText("London");
+                            break;
+                    }
+                }).attach();
 
     }
 
