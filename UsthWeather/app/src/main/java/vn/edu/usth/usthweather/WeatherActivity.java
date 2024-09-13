@@ -43,13 +43,13 @@ public class WeatherActivity extends AppCompatActivity {
                 (tab, position) -> {
                     switch (position) {
                         case 0:
-                            tab.setText("Ha Noi");
+                            tab.setText(getString(R.string.Hanoi_1));
                             break;
                         case 1:
-                            tab.setText("Paris");
+                            tab.setText(getString(R.string.Paris_2));
                             break;
                         case 2:
-                            tab.setText("London");
+                            tab.setText(getString(R.string.London_3));
                             break;
                     }
                 }).attach();

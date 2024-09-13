@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIndicatorColor="#31b1e0"
-        app:tabSelectedTextColor="@color/black"
+        app:tabSelectedTextColor="@color/text_black"
         app:tabTextColor="@android:color/darker_gray" />
 
     <androidx.viewpager2.widget.ViewPager2

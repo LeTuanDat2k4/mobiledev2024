@@ -7,7 +7,7 @@
     tools:context=".ForecastFragment"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FAFAFA">
+    android:background="@color/bottom_background">
 
     <!-- TODO: Update blank fragment layout -->
 

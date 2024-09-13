@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Thời Tiết USTH</string>
+    <string name="top_fragment">Top fragment</string>
+    <string name="bottom_fragment">Bottom fragment</string>
+    <string name="Hanoi_1">Thời Tiết Hanoi</string>
+    <string name="Paris_2">Thời Tiết Paris</string>
+    <string name="London_3">Thời Tiết London</string>
+</resources>
