@@ -3,47 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/top_background"
-    android:padding="20dp"
+    android:padding="10dp"
     tools:context=".WeatherFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/weather_temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12C"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/top_background"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/weather_condition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cloudy"
-        android:textSize="22sp"
-        android:textColor="@android:color/black"
-        android:layout_below="@id/weather_temperature"
-        android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/weather_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="12C"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/weather_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weather_temperature"
+            android:layout_alignParentStart="true"
+            android:text="Cloudy"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="weather icon"
+            android:src="@drawable/cloudy_day_forecast_sun_icon" />
+
+        <TextView
+            android:id="@+id/weather_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/Paris_2"
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/weather_icon"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:contentDescription="weather icon"
-        android:src="@drawable/cloudy_day_forecast_sun_icon"
-        android:layout_centerInParent="true"/>
-
-    <TextView
-        android:id="@+id/weather_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Paris_2"
-        android:textSize="30sp"
-        android:textColor="@color/text_black"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/frame"
+        android:scaleType="fitXY"
+        android:contentDescription="frame overlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
