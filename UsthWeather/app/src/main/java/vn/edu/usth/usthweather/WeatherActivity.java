@@ -1,5 +1,6 @@
 package vn.edu.usth.usthweather;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -21,6 +22,9 @@ public class WeatherActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.be_alright);
+        mediaPlayer.start();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 //        Log.i("WeatherActivity", "onCreate: ");
@@ -53,6 +57,7 @@ public class WeatherActivity extends AppCompatActivity {
                             break;
                     }
                 }).attach();
+
 
     }
 
