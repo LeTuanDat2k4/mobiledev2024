@@ -6,4 +6,5 @@
     <color name="text_gray">@android:color/darker_gray</color>
     <color name="top_background">#DBFBDB</color>
     <color name="bottom_background">#FAFAFA</color>
+<!--    <color name="white">#ffffff</color>-->
 </resources>

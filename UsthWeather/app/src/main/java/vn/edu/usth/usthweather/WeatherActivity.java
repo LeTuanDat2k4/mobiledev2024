@@ -1,11 +1,17 @@
 package vn.edu.usth.usthweather;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -27,6 +33,9 @@ public class WeatherActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 //        Log.i("WeatherActivity", "onCreate: ");
 //
 //        WeatherFragment wf = new WeatherFragment();
@@ -61,7 +70,37 @@ public class WeatherActivity extends AppCompatActivity {
 
     }
 
-//    @Override
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.weather_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        CharSequence text = "Hello toast!";
+        int duration = Toast.LENGTH_SHORT;
+
+
+        switch (id) {
+            case R.id.action_refresh:
+                Toast toast = Toast.makeText(this, text, duration);
+                toast.show();
+                return true;
+
+            case R.id.action_settings:
+                Intent intent = new Intent(this, PrefActivity.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    //    @Override
 //    protected void onStart() {
 //        super.onStart();
 //        Log.i("WeatherActivity","onStart");
